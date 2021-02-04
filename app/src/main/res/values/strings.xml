@@ -2,37 +2,7 @@
     <string name="app_name">kasirku</string>
     <string name="username">username</string>
     <string name="password">password</string>
-    <string name="logo">Logo</string>
     <string name="login">LOGIN</string>
-    <string name="register">Daftar</string>
-    <string name="forgot_password">Lupa Sandi</string>
-    <string name="transaction_password">password transaksi</string>
-    <string name="verify_transaction_password">verifikasi password transaksi</string>
-    <string name="send_password_via_email">kirim password via email</string>
-    <string name="email">Email</string>
-    <string name="menu_ppob">PPOB</string>
-    <string name="top_up_ppob">Top Up PPOB</string>
-    <string name="history">History</string>
-    <string name="financial">Financial</string>
-    <string name="support">Support</string>
-    <string name="daftar_menu">Daftar Menu</string>
-    <string name="icon">Icon</string>
-    <string name="payment">Payment</string>
-    <string name="asuransi">Asuransi</string>
-    <string name="bpjs">BPJS</string>
-    <string name="internet_dan_tv_kabel">Internet Dan TV Kabel</string>
-    <string name="multi_finance">Multi Finance</string>
-    <string name="pdam">PDAM</string>
-    <string name="dana">DANA</string>
-    <string name="go_pay">GO PAY</string>
-    <string name="grab">GRAB</string>
-    <string name="ovo">OVO</string>
-    <string name="bluder_original">Bluder Original</string>
-    <string name="bluder_strawberry">Bluder Strawberry</string>
-    <string name="bluder_blueberry">Bluder Blueberry</string>
-    <string name="bluder_coklat">Bluder Coklat</string>
-    <string name="bluder_pisang">Bluder Pisang</string>
-    <string name="bluder_keju">Bluder Keju</string>
     <!--    <string name="pulsa_pascabayar">Pulsa Pascabayar</string>-->
     <!--    <string name="token_listrik">Token Listrik</string>-->
     <!--    <string name="tagihan_listrik">Tagihan Listrik</string>-->
@@ -53,7 +23,6 @@
     <!--    <string name="post_paid_100">100</string>-->
     <!--    <string name="batalkan_pembelian">Batalkan Pembelian</string>-->
     <!--    <string name="beli">Beli</string>-->
-    <string name="logout">Logout</string>
     <!--    <string name="id_pelanggan">ID Pelanggan</string>-->
     <!--    <string name="nama_pelanggan">Nama Pelanggan</string>-->
     <!--    <string name="biyaya_admin">Biyaya Admin</string>-->
@@ -63,12 +32,4 @@
     <!--    <string name="nomor_meter">Nomor Meter</string>-->
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="dashboard">Dashboard</string>
-    <string name="bonus">Bonus</string>
-    <string name="profil">Profil</string>
-    <string name="pin">PIN</string>
-    <string name="network">Network</string>
-    <string name="scanner">Scanner</string>
-    <string name="menu">Menu</string>
 </resources>
