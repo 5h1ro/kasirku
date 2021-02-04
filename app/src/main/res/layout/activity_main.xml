@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--splash-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="674dp"
+                    android:layout_marginTop="150dp"
+                    android:background="@drawable/bg_blue" />
+
+                <LinearLayout
+                    android:layout_marginTop="-350dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/Username"
+                        android:padding="9dp"
+                        android:elevation="2dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_kolom_login"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="@string/username"
+                        android:drawableStart="@drawable/ic_person_outline"
+                        android:ems="10"
+                        android:hint="@string/username"
+                        android:inputType="textPersonName" />
+
+
+                    <EditText
+                        android:id="@+id/Password"
+                        android:shadowColor="@color/black"
+                        android:padding="9dp"
+                        android:elevation="2dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_kolom_login"
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="50dp"
+                        android:autofillHints="@string/password"
+                        android:drawableStart="@drawable/ic_lock_open"
+                        android:ems="10"
+                        android:hint="@string/password"
+                        android:inputType="textPassword" />
+
+                    <LinearLayout
+                        android:layout_marginTop="50dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="50dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="80dp">
+
+                        <Button
+                            android:id="@+id/LoginButton"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_width="500dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_login"
+                            android:textColor="@color/textPrimary"
+                            android:text="@string/login"
+                            tools:ignore="ButtonStyle" />
+
+                        <!--            <Button-->
+                        <!--                android:id="@+id/RegisterButton"-->
+                        <!--                android:gravity="center"-->
+                        <!--                android:layout_weight="1"-->
+                        <!--                android:layout_marginStart="10dp"-->
+                        <!--                android:layout_marginEnd="10dp"-->
+                        <!--                android:layout_width="wrap_content"-->
+                        <!--                android:layout_height="wrap_content"-->
+                        <!--                android:background="@drawable/button_primary"-->
+                        <!--                android:textColor="@color/textPrimary"-->
+                        <!--                android:text="@string/register"-->
+                        <!--                tools:ignore="ButtonStyle" />-->
+
+                    </LinearLayout>
+                    <!--        <Button-->
+                    <!--            android:id="@+id/ForgotPasswordButton"-->
+                    <!--            android:layout_marginStart="50dp"-->
+                    <!--            android:layout_marginTop="10dp"-->
+                    <!--            android:layout_marginEnd="50dp"-->
+                    <!--            android:layout_marginBottom="50dp"-->
+                    <!--            android:layout_width="match_parent"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:background="@drawable/button_warning"-->
+                    <!--            android:textColor="@color/textPrimary"-->
+                    <!--            android:text="@string/forgot_password" />-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
