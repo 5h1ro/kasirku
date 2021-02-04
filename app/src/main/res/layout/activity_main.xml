@@ -83,6 +83,7 @@
                         <Button
                             android:id="@+id/LoginButton"
                             android:gravity="center"
+                            android:fontFamily="@font/heycomic"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_width="500dp"

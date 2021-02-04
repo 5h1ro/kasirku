@@ -4,6 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:id="@+id/parentA"
     tools:context=".BuyActivity">
+
+    <!--splash-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200pt"
+        android:background="@drawable/bg_wave"
+        tools:ignore="MissingConstraints" />
+
+
+    <ScrollView
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/parentpesanan"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Nama Pesanan"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/heycomic"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="-140dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/pesanan"
+                    android:padding="9dp"
+                    android:elevation="2dp"
+                    android:background="@drawable/bg_kolom_login"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:autofillHints="@string/username"
+                    android:drawableStart="@drawable/ic_person_outline"
+                    android:ems="10"
+                    android:hint="@string/username"
+                    android:inputType="phone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
