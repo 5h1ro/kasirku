@@ -43,7 +43,7 @@
                     android:textSize="30dp"
                     android:textStyle="bold"
                     android:fontFamily="@font/heycomic"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:layout_marginLeft="-140dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
