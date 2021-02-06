@@ -27,7 +27,6 @@ class MenuActivity : AppCompatActivity() {
     public lateinit var priceAPI: String
     public lateinit var nameAPI: String
     public lateinit var hasil: String
-    public lateinit var getHasil: String
     public var hasilName = ArrayList<HashMap<String, String>>()
     public var hasilPrice = ArrayList<HashMap<String, String>>()
     public lateinit var isiName: String
