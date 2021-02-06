@@ -15,58 +15,130 @@
         android:background="@drawable/bg_wave"
         tools:ignore="MissingConstraints" />
 
-
-    <ScrollView
+    <LinearLayout
+        android:gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="100dp"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:elevation="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/brown"
+        android:orientation="vertical"
+        android:layout_width="400dp"
+        android:layout_height="550dp">
+        <ImageView
+            android:background="@drawable/header_buy"
+            android:layout_width="400dp"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:text="Total"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-80dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/heycomic"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nameProduct"
+                android:text="Nama Pesanan"
+                android:textSize="30dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="18dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/heycomic"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/priceProduct"
+                android:text="Rp. 15.000"
+                android:textColor="@color/white"
+                android:fontFamily="@font/heycomic"
+                android:textSize="30dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginLeft="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/pesanan"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="9dp"
+            android:elevation="2dp"
+            android:background="@drawable/bg_kolom_login"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/username"
+            android:textColor="@color/brown"
+            android:drawableStart="@drawable/ic_count"
+            android:ems="10"
+            android:hint="jumlah"
+            android:inputType="phone" />
 
 
         <LinearLayout
-            android:id="@+id/parentpesanan"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:layout_marginTop="280dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <TextView
+                android:text="Total"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp"
+                android:ems="3"
+                android:textStyle="bold"
+                android:fontFamily="@font/heycomic"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:text="Nama Pesanan"
-                    android:textSize="30dp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/heycomic"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="-140dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <EditText
-                    android:id="@+id/pesanan"
-                    android:padding="9dp"
-                    android:elevation="2dp"
-                    android:background="@drawable/bg_kolom_login"
-                    android:layout_width="500dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:autofillHints="@string/username"
-                    android:drawableStart="@drawable/ic_person_outline"
-                    android:ems="10"
-                    android:hint="@string/username"
-                    android:inputType="phone" />
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/jumlah"
+                android:textAlignment="textStart"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/heycomic"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
-    </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginTop="20dp"
+            android:elevation="10dp"
+            android:textSize="20dp"
+            android:fontFamily="@font/heycomic"
+            android:textColor="@color/white"
+            android:background="@drawable/button_submit"
+            android:text="Submit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

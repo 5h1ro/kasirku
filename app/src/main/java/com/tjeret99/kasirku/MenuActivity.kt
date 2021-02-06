@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -27,10 +26,9 @@ class MenuActivity : AppCompatActivity() {
     public lateinit var priceAPI: String
     public lateinit var nameAPI: String
     public lateinit var hasil: String
+    public lateinit var btnBuy : LinearLayout
     public var hasilName = ArrayList<HashMap<String, String>>()
     public var hasilPrice = ArrayList<HashMap<String, String>>()
-    public lateinit var isiName: String
-    public lateinit var txtName: EditText
     public lateinit var mQueue: RequestQueue
 //    val url = "http://192.168.9.111:8000/api/product"
     val url = "https://pajuts.000webhostapp.com/produk.php"
@@ -40,6 +38,7 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         layout = findViewById(R.id.parent)
+        btnBuy = findViewById(R.id.buy)
 
         mQueue = Volley.newRequestQueue(this)
         jsonParse()
@@ -93,6 +92,14 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun produk(textName: String) {
+
+        btnBuy.setOnClickListener {
+
+            val intent = Intent(this, BuyActivity::class.java)
+            intent.putExtra("name", namaProduk)
+            intent.putExtra("price", priceProduk)
+            startActivity(intent)
+        }
 
         val parent = LinearLayout(this)
         val linear_parent = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
@@ -160,10 +167,15 @@ class MenuActivity : AppCompatActivity() {
         layout.addView(parent)
     }
 
-    fun buy(view: View?) {
-        startActivity(Intent(applicationContext, BuyActivity::class.java))
-        finish()
-    }
+//    fun buy(view: View?) {
+//        val bundle = Bundle()
+//        bundle.putString("nameProduct", namaProduk)
+//        bundle.putString("priceProduct", priceProduk)
+//
+//        val intent = Intent(this, BuyActivity::class.java)
+//        intent.putExtras(bundle)
+//        startActivity(intent)
+//    }
 
 
 }

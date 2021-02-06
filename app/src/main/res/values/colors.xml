@@ -5,7 +5,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">#c19277</color>
+    <color name="colorPrimary">#91684a</color>
     <color name="colorPrimaryDark">#6a492b</color>
 
     <color name="colorSecondary">#F3E7A9</color>
@@ -15,5 +15,8 @@
     <color name="textPrimary">#ffffff</color>
 
     <color name="grey">#f6f5f5</color>
+
+    <color name="brown">#c19277</color>
+
 
 </resources>
