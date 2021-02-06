@@ -6,7 +6,8 @@ import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_buy.*
+import java.text.NumberFormat
+import java.util.*
 
 class BuyActivity : AppCompatActivity() {
 
@@ -29,6 +30,8 @@ class BuyActivity : AppCompatActivity() {
         val extras = intent.extras
         val name = extras!!.getString("name")
         val price = extras!!.getString("price")
+        val localeID = Locale("in", "ID")
+        val format: NumberFormat = NumberFormat.getCurrencyInstance(localeID)
 
         pesanan.addTextChangedListener(object : TextWatcher {
 
@@ -48,7 +51,7 @@ class BuyActivity : AppCompatActivity() {
                 var res = price!!.replace("[^0-9]".toRegex(), "")
                 val number: Int = s.toString().toInt() * res.toInt()
 
-                jumlah.setText(number.toString())
+                jumlah.setText(format.format(number).toString())
             }
         })
 
