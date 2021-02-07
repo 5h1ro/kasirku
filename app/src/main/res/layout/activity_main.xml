@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ScrollView
@@ -22,29 +22,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!--splash-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="674dp"
-                    android:layout_marginTop="150dp"
-                    android:background="@drawable/bg_blue" />
 
                 <LinearLayout
-                    android:layout_marginTop="-350dp"
+                    android:background="@drawable/bg_login_brown"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="800dp"
                     android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_width="400dp"
+                    android:layout_height="600dp">
+
+                    <TextView
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:textSize="50dp"
+                        android:text="Login"
+                        android:fontFamily="@font/twcent"
+                        android:padding="9dp"
+                        android:elevation="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
 
                     <EditText
                         android:id="@+id/Username"
                         android:padding="9dp"
                         android:elevation="2dp"
-                        android:layout_gravity="center"
                         android:background="@drawable/bg_kolom_login"
-                        android:layout_width="500dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
-                        android:layout_marginEnd="50dp"
                         android:autofillHints="@string/username"
                         android:drawableStart="@drawable/ic_person_outline"
                         android:ems="10"
@@ -59,7 +66,7 @@
                         android:elevation="2dp"
                         android:layout_gravity="center"
                         android:background="@drawable/bg_kolom_login"
-                        android:layout_width="500dp"
+                        android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="20dp"
@@ -78,15 +85,16 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:gravity="center"
-                        android:layout_height="80dp">
+                        android:layout_height="match_parent">
 
                         <Button
                             android:id="@+id/LoginButton"
                             android:gravity="center"
                             android:fontFamily="@font/heycomic"
+                            android:layout_marginTop="80dp"
                             android:layout_marginStart="10dp"
                             android:layout_marginEnd="10dp"
-                            android:layout_width="500dp"
+                            android:layout_width="300dp"
                             android:layout_height="wrap_content"
                             android:background="@drawable/button_login"
                             android:textColor="@color/textPrimary"
