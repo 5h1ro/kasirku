@@ -1,8 +1,10 @@
 package com.tjeret99.kasirku
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -15,6 +17,8 @@ class BuyActivity : AppCompatActivity() {
     public lateinit var nameProduct : TextView
     public lateinit var priceProduct : TextView
     public lateinit var jumlah : TextView
+    public lateinit var buy : Button
+    public lateinit var cancel : Button
     public lateinit var pesanan : EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +28,8 @@ class BuyActivity : AppCompatActivity() {
         priceProduct = findViewById(R.id.priceProduct)
         jumlah = findViewById(R.id.jumlah)
         pesanan = findViewById(R.id.pesanan)
-//        priceProduct = findViewById(R.id.priceProduct)
-
+        buy = findViewById(R.id.btn_buy)
+        cancel = findViewById(R.id.btn_cancel)
 
         val extras = intent.extras
         val name = extras!!.getString("name")
@@ -59,17 +63,20 @@ class BuyActivity : AppCompatActivity() {
         nameProduct.setText(name)
         priceProduct.setText(price)
 
+        buy.setOnClickListener{
+            intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
-//        val bundle = intent.extras
-//        if(intent.extras != null)
-//        {
-//
-//            nameProduct.setText(bundle?.getString("nameProduct"))
-////            priceProduct.setText(bundle?.getString("priceProduct"))
-//        }else{
-//            nameProduct.setText(intent.getStringExtra("nameProduct"))
-////            priceProduct.setText(intent.getStringExtra("priceProduct"))
-//        }
+
+        cancel.setOnClickListener{
+            intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+
 
 
     }

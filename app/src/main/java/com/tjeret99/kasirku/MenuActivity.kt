@@ -62,28 +62,26 @@ class MenuActivity : AppCompatActivity() {
                     listPrice.add(priceAPI)
 
                 }
-                Toast.makeText(this, nameAPI, Toast.LENGTH_LONG).show()
                 produk("test")
             } catch (e: JSONException) {
                 e.printStackTrace()
             }
         }) { error ->
-            Log.i("LOG", "Volley Error : " + error.message)
             error.printStackTrace() }
         mQueue.add(request)
     }
 
-    fun success() {
-        if (hasil == "Berhasil Login") {
-            Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
-        }
-    }
-
-    fun error() {
-        if (hasil == "Email atau Password Salah") {
-            Toast.makeText(this, "NPM atau Password anda salah", Toast.LENGTH_LONG).show()
-        }
-    }
+//    fun success() {
+//        if (hasil == "Berhasil Login") {
+//            Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
+//        }
+//    }
+//
+//    fun error() {
+//        if (hasil == "Email atau Password Salah") {
+//            Toast.makeText(this, "NPM atau Password anda salah", Toast.LENGTH_LONG).show()
+//        }
+//    }
 
     fun produk(textName: String) {
 
@@ -101,6 +99,7 @@ class MenuActivity : AppCompatActivity() {
                 intent.putExtra("name", listName[i])
                 intent.putExtra("price", listPrice[i])
                 startActivity(intent)
+                finish()
             }
 
             val product_pack = LinearLayout(this)

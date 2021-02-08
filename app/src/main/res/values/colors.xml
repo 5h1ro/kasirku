@@ -16,7 +16,11 @@
 
     <color name="grey">#f6f5f5</color>
 
+    <color name="greysecond">#929397</color>
+
     <color name="brown">#c19277</color>
+
+
 
 
 </resources>
