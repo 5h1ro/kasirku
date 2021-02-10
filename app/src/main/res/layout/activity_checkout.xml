@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_buy"
+    android:id="@+id/parentA"
+    tools:context=".CheckoutActivity">
+
+
+    <LinearLayout
+        android:id="@+id/parentOrder"
+        android:orientation="vertical"
+        android:layout_marginTop="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/total"
+        android:textAlignment="viewEnd"
+        android:layout_marginLeft="615dp"
+        android:layout_marginTop="110dp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nillandblack"
+        android:text=""
+        android:textColor="@color/greysecond"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_total"
+        android:textAlignment="viewStart"
+        android:layout_marginLeft="505dp"
+        android:layout_marginTop="-39dp"
+        android:layout_width="100dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nillandblack"
+        android:text="Total"
+        android:textColor="@color/greysecond"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+
+
+
+</LinearLayout>

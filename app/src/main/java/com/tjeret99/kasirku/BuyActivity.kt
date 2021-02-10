@@ -65,6 +65,8 @@ class BuyActivity : AppCompatActivity() {
 
         buy.setOnClickListener{
             intent = Intent(this, MenuActivity::class.java)
+            intent.putExtra("nameBuy", name)
+            intent.putExtra("priceBuy", price)
             startActivity(intent)
             finish()
         }

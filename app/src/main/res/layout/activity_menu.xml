@@ -8,35 +8,58 @@
     android:id="@+id/parentA"
     tools:context=".MenuActivity">
 
-
-    <ScrollView
-        android:layout_marginTop="200dp"
-        android:layout_weight="1"
+    <LinearLayout
         android:orientation="vertical"
-        android:foregroundGravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
 
-        <LinearLayout
-            android:id="@+id/buy"
-            android:gravity="center"
+        <ScrollView
+            android:layout_marginTop="200dp"
+            android:layout_weight="1"
             android:orientation="vertical"
+            android:foregroundGravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="400dp">
 
             <LinearLayout
-                android:id="@+id/parent"
+                android:id="@+id/buy"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <LinearLayout
+                    android:id="@+id/parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_checkout"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_brown"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/brown"
+            android:fontFamily="@font/heycomic"
+            android:text="Checkout"/>
+
+    </LinearLayout>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

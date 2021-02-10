@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.android.volley.Request
@@ -26,12 +23,14 @@ class MenuActivity : AppCompatActivity() {
 
 
     lateinit var layout: LinearLayout
-    public lateinit var priceAPI: String
-    public lateinit var nameAPI: String
-    public lateinit var hasil: String
+    lateinit var priceAPI: String
+    lateinit var nameAPI: String
+    lateinit var btnCheckout: Button
     var listName = ArrayList<String>()
     var listPrice = ArrayList<String>()
-    public lateinit var mQueue: RequestQueue
+    var orderName  = ArrayList<String>()
+    var orderPrice  = ArrayList<String>()
+    lateinit var mQueue: RequestQueue
 //    val url = "http://192.168.9.111:8000/api/product"
     val url = "https://pajuts.000webhostapp.com/produk.php"
 
@@ -43,6 +42,7 @@ class MenuActivity : AppCompatActivity() {
 
         mQueue = Volley.newRequestQueue(this)
         jsonParse()
+
 
     }
 
@@ -100,6 +100,26 @@ class MenuActivity : AppCompatActivity() {
                 intent.putExtra("price", listPrice[i])
                 startActivity(intent)
                 finish()
+            }
+
+            parent.setOnLongClickListener {
+                orderName.add(listName[i])
+                orderPrice.add(listPrice[i])
+
+                Toast.makeText(this, orderName.toString(), Toast.LENGTH_SHORT).show()
+
+                btnCheckout = findViewById(R.id.btn_checkout)
+                btnCheckout.setOnClickListener {
+
+                    val intent = Intent(this, CheckoutActivity::class.java)
+                    intent.putStringArrayListExtra("nameArray", orderName)
+                    intent.putStringArrayListExtra("priceArray", orderPrice)
+                    startActivity(intent)
+
+                }
+
+
+                return@setOnLongClickListener true
             }
 
             val product_pack = LinearLayout(this)
