@@ -3,6 +3,10 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">LOGIN</string>
+
+    <string name="err_name">The name field is required.</string>
+    <string name="err_email">The email must be a valid email address.</string>
+    <string name="err_password">The password must be at least 6 characters.</string>
     <!--    <string name="pulsa_pascabayar">Pulsa Pascabayar</string>-->
     <!--    <string name="token_listrik">Token Listrik</string>-->
     <!--    <string name="tagihan_listrik">Tagihan Listrik</string>-->

@@ -1,9 +1,9 @@
 package com.tjeret99.kasirku
 
+import android.R.id
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
-import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
 import android.widget.*
@@ -13,10 +13,12 @@ import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.squareup.picasso.Picasso
 import org.json.JSONException
 import org.json.JSONObject
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.coroutines.EmptyCoroutineContext.get
 
 
 class MenuActivity : AppCompatActivity() {
@@ -25,14 +27,18 @@ class MenuActivity : AppCompatActivity() {
     lateinit var layout: LinearLayout
     lateinit var priceAPI: String
     lateinit var nameAPI: String
+    lateinit var pictureAPI: String
     lateinit var btnCheckout: Button
     var listName = ArrayList<String>()
     var listPrice = ArrayList<String>()
+    var listPicture = ArrayList<String>()
     var orderName  = ArrayList<String>()
     var orderPrice  = ArrayList<String>()
+    var orderPicture  = ArrayList<String>()
     lateinit var mQueue: RequestQueue
 //    val url = "http://192.168.9.111:8000/api/product"
     val url = "https://pajuts.000webhostapp.com/produk.php"
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +63,11 @@ class MenuActivity : AppCompatActivity() {
 
                     nameAPI = c.getString("name")
                     priceAPI = c.getString("price")
+                    pictureAPI = c.getString("picture")
 
                     listName.add(nameAPI)
                     listPrice.add(priceAPI)
+                    listPicture.add(pictureAPI)
 
                 }
                 produk("test")
@@ -87,6 +95,8 @@ class MenuActivity : AppCompatActivity() {
 
 
         for (i in 0 until listName.size){
+
+            val urel : String = "https://pajuts.000webhostapp.com/bluder/"+listPicture[i] + ".jpg"
             val parent = LinearLayout(this)
             val linear_parent = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT)
             parent.gravity = Gravity.CENTER
@@ -98,6 +108,7 @@ class MenuActivity : AppCompatActivity() {
                 val intent = Intent(this, BuyActivity::class.java)
                 intent.putExtra("name", listName[i])
                 intent.putExtra("price", listPrice[i])
+//                intent.putExtra("picture", listPicture[i])
                 startActivity(intent)
                 finish()
             }
@@ -144,7 +155,7 @@ class MenuActivity : AppCompatActivity() {
 
             val tv_up = TextView(this)
             val linear_tv_up = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
-            linear_tv_up.setMargins(100, 0, 0, -50)
+            linear_tv_up.setMargins(100, 0, 0, 0)
             tv_up.setText(listPrice[i])
             tv_up.gravity=Gravity.CENTER
             tv_up.typeface = resources.getFont(R.font.heycomic)
@@ -154,15 +165,15 @@ class MenuActivity : AppCompatActivity() {
             tv_up.setLayoutParams(linear_tv_up)
 
             val iv_product = ImageView(this)
-            val linear_iv_product = LinearLayout.LayoutParams(300, 300)
+            val linear_iv_product = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             linear_iv_product.gravity = Gravity.CENTER
-            iv_product.setImageResource(R.drawable.bluder)
+            Picasso.get().load(urel).resize(260, 260) .into(iv_product)
             iv_product.setLayoutParams(linear_iv_product)
 
             val tv_down = TextView(this)
             val linear_tv_down = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             linear_tv_down.gravity = Gravity.CENTER
-            linear_tv_down.setMargins(0, -30, 0, 0)
+            linear_tv_down.setMargins(0, -5, 0, 0)
             tv_down.gravity=Gravity.CENTER
             tv_down.typeface = resources.getFont(R.font.heycomic)
             tv_down.typeface = Typeface.DEFAULT_BOLD       //Bold Text
